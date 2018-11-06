@@ -1,13 +1,20 @@
 <template lang="html">
   <div class="v-autocomplete">
     <div class="v-autocomplete-input-group" :class="{'v-autocomplete-selected': value}">
-      <input type="search" v-model="searchText" v-bind="inputAttrs" 
+      <input type="search" 
+            v-model="searchText" 
+            v-bind="inputAttrs" 
             :class="inputAttrs.class || inputClass"
             :placeholder="inputAttrs.placeholder || placeholder"
             :disabled="inputAttrs.disabled || disabled"
-            @blur="blur" @focus="focus" @change="inputChange"
-            @keyup.enter="keyEnter" @keydown.tab="keyEnter" 
-            @keydown.up="keyUp" @keydown.down="keyDown">
+            autocomplete="off"
+            @blur="blur" 
+            @focus="focus" 
+            @input="inputChange"
+            @keyup.enter="keyEnter" 
+            @keydown.tab="keyEnter" 
+            @keydown.up="keyUp" 
+            @keydown.down="keyDown">
     </div>
     <div class="v-autocomplete-list" v-if="show">
       <div class="v-autocomplete-list-item" v-for="item, i in internalItems" @click="onClickItem(item)"
@@ -59,6 +66,7 @@ export default {
   },
   methods: {
     inputChange () {
+      console.log("chjange is here")
       this.showList = true
       this.cursor = -1
       this.onSelectItem(null, 'inputChange')
@@ -86,6 +94,7 @@ export default {
     },
 
     onSelectItem (item) {
+      console.log('onSelectItem', item)
       if (item) {
         this.internalItems = [item]
         this.searchText = this.getLabel(item)

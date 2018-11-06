@@ -1,5 +1,5 @@
 export default {
-  minLen: 3,
+  minLen: 2,
   wait: 500,
   timeout: null,
 
