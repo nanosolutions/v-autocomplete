@@ -2,7 +2,7 @@ v-autocomplete
 ==============
 
 ---
-
+> Modified version for Nano Solutions Usage.
 > Autocomplete component for Vue.js
 >
 > This component is css-free. The idea is to be used with any framework.
@@ -242,7 +242,11 @@ $ npm run dist
 
 ```
 
-Authors
+Modifed
+--------
+- Petr Cervenka (@cerw)
+
+Original Authors
 -------
 
 -	[Marcos Paliari](http://paliari.com)

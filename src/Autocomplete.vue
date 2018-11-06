@@ -5,7 +5,7 @@
             :class="inputAttrs.class || inputClass"
             :placeholder="inputAttrs.placeholder || placeholder"
             :disabled="inputAttrs.disabled || disabled"
-            @blur="blur" @focus="focus" @input="inputChange"
+            @blur="blur" @focus="focus" @change="inputChange"
             @keyup.enter="keyEnter" @keydown.tab="keyEnter" 
             @keydown.up="keyUp" @keydown.down="keyDown">
     </div>

@@ -1,5 +1,8 @@
 <template lang="html">
-  <div>{{item}}</div>
+  <div>
+    <span>{{item.name}}</span>
+    <abbr>{{item.title}}</abbr>
+</div>
 </template>
 
 <script>
