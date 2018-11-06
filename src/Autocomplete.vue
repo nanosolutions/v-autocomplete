@@ -66,7 +66,6 @@ export default {
   },
   methods: {
     inputChange () {
-      console.log("chjange is here")
       this.showList = true
       this.cursor = -1
       this.onSelectItem(null, 'inputChange')
@@ -94,7 +93,6 @@ export default {
     },
 
     onSelectItem (item) {
-      console.log('onSelectItem', item)
       if (item) {
         this.internalItems = [item]
         this.searchText = this.getLabel(item)
